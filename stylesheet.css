@@ -1,0 +1,24 @@
+html{
+	background-image: url('background.webp');
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+head{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	line-height: 1.4em;
+	color: #4d4d4d;
+	min-width: 230px;
+	max-width: 550px;
+	margin: 0 auto;
+	font-weight: 300;
+    padding-top: 30px;
+}
+
+
+
