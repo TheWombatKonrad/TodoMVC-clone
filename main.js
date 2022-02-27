@@ -18,7 +18,7 @@ function AddTodo() {
 
   li.appendChild(checkbox);
 
-  let text = document.createElement('p');
+  let text = document.createElement('label');
   text.textContent = todo;
 
   li.appendChild(text);

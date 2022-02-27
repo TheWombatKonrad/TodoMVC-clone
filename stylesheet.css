@@ -1,24 +1,71 @@
+* {
+	margin: 0 auto;
+	padding: 0;
+}
+
 html{
 	background-image: url('background.webp');
 	background-size: 100%;
 	background-attachment: fixed;
 }
 
-head{
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+body {
+	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	color: #4d4d4d;
-	min-width: 230px;
-	max-width: 550px;
-	margin: 0 auto;
 	font-weight: 300;
-    padding-top: 30px;
+  padding-top: 30px;
 }
 
+h1 {
+	font-size: 100px;
+	text-align: center;
+	margin-bottom: 50px;
+	margin-top: 20px;
+	color: white;
+}
 
+main {
+	display: flex;
+	flex-direction: column;
+	max-width: 500px;
+}
 
+#input-box {
+	display: flex;
+	align-content: stretch;
+	width: 100%;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+#new-todo {
+	outline: none;
+	border-radius: 0;
+	padding: 6px;
+	font-size: 24px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+ul {
+	width: 100%;
+	background: white;
+	box-sizing: border-box;
+	list-style-type: none;
+}
+
+li {
+	border-bottom: 1px solid #ededed;
+	padding: 15px 15px 15px 15px;
+}
+
+li label {
+	font-size: 24px;
+	margin-left: 10px;
+}
+
+.control-box {
+	background: white;
+	width: 100%;
+	text-align: center;
+}

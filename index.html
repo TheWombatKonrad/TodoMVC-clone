@@ -10,13 +10,16 @@
   <body>
 
     <header>
-      Todos
-      <input id="new-todo"  placeholder="What needs to be done?" autofocus>
+      <h1>todos</h1>
     </header>
 
     <main>
-      <input class="toggle-all" id="toggle-all" type="checkbox">
-      <input class="toggle" id="toggle" type="checkbox">
+      <div id=input-box>
+        <input id="new-todo"  placeholder="What needs to be done?" autofocus>
+        <input class="toggle-all" id="toggle-all" type="checkbox">
+
+      </div>
+
       <ul id="todo-list">
 
       </ul>
@@ -29,6 +32,7 @@
           <button type="button" name="all">All</button>
           <button type="button" name="active">Active</button>
           <button type="button" name="completed">Completed</button>
+          <button type="button" name="clear-completed">Clear Completed</button>
         </ul>
       </div>
     </main>
