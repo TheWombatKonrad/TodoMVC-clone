@@ -37,16 +37,29 @@ main {
 	width: 100%;
 	box-sizing: border-box;
 	align-items: center;
-
+	box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
 }
 
 #new-todo {
 	outline: none;
-	border-radius: 0;
+	border-radius: none;
+	border: none;
 	padding: 6px;
 	font-size: 24px;
 	width: 100%;
 	box-sizing: border-box;
+	box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
+	padding: 16px 16px 16px 6px;
+}
+
+#toggle-all {
+	content: ">";
+	appearance: none;
+	font: inherit;
+	color: #e6e6e6;
+	width: 1.15em;
+	height: 1.15em;
+	padding: 10px 0px 10px 27px;
 }
 
 ul {

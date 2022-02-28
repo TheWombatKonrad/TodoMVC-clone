@@ -26,6 +26,10 @@ function AddTodo() {
   document.getElementById('todo-list').appendChild(li);
 
   document.getElementById('new-todo').value='';
+
+  let buttons = document.querySelectorAll('button');
+
+  for(button of buttons){
+    button.hidden = false;
+  }
 }
-
-
