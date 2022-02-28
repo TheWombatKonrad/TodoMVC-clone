@@ -31,6 +31,8 @@ main {
 	max-width: 500px;
 }
 
+/*INPUT BOX*/
+
 #input-box {
 	display: flex;
 	align-content: stretch;
@@ -53,16 +55,26 @@ main {
 }
 
 #toggle-all {
-	content: ">";
-	appearance: none;
-	font: inherit;
-	color: #e6e6e6;
-	width: 1.15em;
-	height: 1.15em;
-	padding: 10px 0px 10px 27px;
+	display: none;
 }
 
-ul {
+#toggle-all + label {
+	border-radius: 25%;
+	padding: 2px 2px 0px 2px;
+	margin-left: 1px;
+}
+
+#toggle-all:checked + label{
+	background: rgb(201, 200, 199, 0.2);
+}
+
+label img {
+	width: 1.5em;
+}
+
+/*LIST BOX*/
+
+ul { /*affects todo-list and button-list*/
 	width: 100%;
 	background: white;
 	box-sizing: border-box;
