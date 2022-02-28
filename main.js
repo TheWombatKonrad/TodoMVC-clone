@@ -1,9 +1,9 @@
 let input = document.getElementById("new-todo");
-input.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-        event.preventDefault();
-        AddTodo();
-    }
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    AddTodo();
+  }
 });
 
 function AddTodo() {
@@ -25,4 +25,7 @@ function AddTodo() {
 
   document.getElementById('todo-list').appendChild(li);
 
+  document.getElementById('new-todo').value='';
 }
+
+

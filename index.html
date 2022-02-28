@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>TodoMVC</title>
-  </head>
-  <body>
 
-    <header>
-      <h1>todos</h1>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="main.js" defer></script>
+  <link rel="stylesheet" href="stylesheet.css">
+  <title>TodoMVC</title>
+</head>
 
-    <main>
-      <div id=input-box>
-        <input id="new-todo"  placeholder="What needs to be done?" autofocus>
-        <input class="toggle-all" id="toggle-all" type="checkbox">
+<body>
 
-      </div>
+  <header>
+    <h1>todos</h1>
+  </header>
 
-      <ul id="todo-list">
+  <main>
 
+    <div id=input-box>
+      <input id="new-todo" placeholder="What needs to be done?">
+      <input class="toggle-all" id="toggle-all" type="checkbox">
+
+    </div>
+
+    <ul id="todo-list">
+
+    </ul>
+    <div class="control-box">
+      <span class="todo-count">
+
+      </span>
+
+      <ul class="filters">
+
+        <button type="button" name="all">All</button>
+        <button type="button" name="clear-completed">Clear Completed</button>
+        <button type="button" name="active">Active</button>
+        <button type="button" name="completed">Completed</button>
       </ul>
-      <div class="control-box">
-        <span class="todo-count">
+    </div>
+  </main>
 
-        </span>
+</body>
 
-        <ul class="filters">
-          <button type="button" name="all">All</button>
-          <button type="button" name="active">Active</button>
-          <button type="button" name="completed">Completed</button>
-          <button type="button" name="clear-completed">Clear Completed</button>
-        </ul>
-      </div>
-    </main>
-
-  </body>
 </html>
