@@ -25,6 +25,7 @@ h1 {
 }
 
 main {
+	background: white;
 	display: flex;
 	flex-direction: column;
 	max-width: 500px;
@@ -36,6 +37,7 @@ main {
 	width: 100%;
 	box-sizing: border-box;
 	align-items: center;
+
 }
 
 #new-todo {
@@ -65,7 +67,6 @@ li label {
 }
 
 .control-box {
-	background: white;
 	width: 100%;
 	text-align: center;
 }
@@ -74,4 +75,3 @@ li label {
 	padding: 2px;
 	display:table-row-group
 }
-	
