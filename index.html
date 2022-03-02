@@ -20,7 +20,7 @@
     <div id=input-box>
       <input id="toggle-all" type="checkbox">
       <label for="toggle-all"><img src="toggle-all-image.png" alt=">"> </label>
-      <input id="new-todo" placeholder="What needs to be done?">
+      <input id="new-todo" placeholder="What needs to be done?" autofocus>
 
 
     </div>
@@ -28,18 +28,17 @@
     <ul id="todo-list">
 
     </ul>
-    <div class="control-box">
+    <div class="control-box" hidden>
       <span class="todo-count">
 
       </span>
 
-      <ul class="filters">
-
-        <button type="button" name="all" hidden>All</button>
-        <button type="button" name="clear-completed" hidden>Clear Completed</button>
-        <button type="button" name="active" hidden>Active</button>
-        <button type="button" name="completed" hidden>Completed</button>
-      </ul>
+      <div class="filters">
+        <button type="button" name="all" class="active">All</button>
+        <button type="button" name="clear-completed">Clear Completed</button>
+        <button type="button" name="active">Active</button>
+        <button type="button" name="completed">Completed</button>
+      </div>
     </div>
   </main>
 

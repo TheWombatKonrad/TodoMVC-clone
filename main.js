@@ -23,13 +23,19 @@ function AddTodo() {
 
   li.appendChild(text);
 
+  let destroyButton = document.createElement('button');
+  destroyButton.setAttribute('class', 'destroy');
+
+  let destroyImage = document.createElement('img');
+  destroyImage.src = 'destroy-image.png'
+  destroyImage.alt = 'X';
+
+  destroyButton.appendChild(destroyImage);
+  li.appendChild(destroyButton);
+
   document.getElementById('todo-list').appendChild(li);
 
   document.getElementById('new-todo').value='';
 
-  let buttons = document.querySelectorAll('button');
-
-  for(button of buttons){
-    button.hidden = false;
-  }
+  document.querySelector('.control-box').hidden = false;
 }
