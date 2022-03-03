@@ -36,17 +36,8 @@ function AddTodo() {
   document.getElementById('todo-list').appendChild(li);
 
   document.getElementById('new-todo').value='';
-<<<<<<< Updated upstream
 
+  //visa control-box
   document.querySelector('.control-box').hidden = false;
-}
-=======
-  document.getElementById('button').hidden = false;
-}
 
-
-
-
-
-
->>>>>>> Stashed changes
+}//method
