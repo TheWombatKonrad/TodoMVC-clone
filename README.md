@@ -5,8 +5,8 @@
 - ge funktion till alla knappar
 - sista css grejs
 
--text stanar kvar i rutan efter enter
-- destroy knapp
+- responsivitet:
+    control-box två rader?
 
-frågor:
-- checkboxen toggle-all.....
+
+T ex med headern så har de gjort det med position istället, top -155px, men vi vill inte göra så. :(
