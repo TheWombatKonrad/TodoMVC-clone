@@ -26,8 +26,6 @@ function AddTodo() {
 
   li.appendChild(text);
 
-  todolist.push(text);
-
   let destroyButton = document.createElement('button');
   destroyButton.setAttribute('class', 'destroy');
 
@@ -38,12 +36,16 @@ function AddTodo() {
   destroyButton.appendChild(destroyImage);
   li.appendChild(destroyButton);
 
-  document.getElementById('todo-list').appendChild(li);
+  todoList.push(li);
+
+  for(todo of todoList)
+  {
+    document.getElementById('todo-list').appendChild(todo);
+  }
 
   document.getElementById('new-todo').value='';
 
-  visa control-box
- document.querySelector('.control-box').hidden = false;
+  document.querySelector('.control-box').hidden = false;
 
 
 
