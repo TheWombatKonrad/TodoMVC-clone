@@ -6,7 +6,7 @@ input.addEventListener("keyup", function (event) {
   }
 });
 
-let todolist = [];
+let todoList = [];
 
 
 function AddTodo() {
@@ -28,10 +28,6 @@ function AddTodo() {
 
   todolist.push(text);
 
-  //document.getElementById('todo-count').textContent = todolist.lenght;
-  document.getElementById('hej').textContent = todolist.length;
-  
-  
   let destroyButton = document.createElement('button');
   destroyButton.setAttribute('class', 'destroy');
 
@@ -46,11 +42,9 @@ function AddTodo() {
 
   document.getElementById('new-todo').value='';
 
-  //visa control-box
- // document.querySelector('.control-box').hidden = false;
+  visa control-box
+ document.querySelector('.control-box').hidden = false;
 
- 
+
 
 }//method
-
-
