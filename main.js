@@ -13,7 +13,7 @@ input.addEventListener("keyup", function (event) {
 });
 
 document.getElementById('toggle-all')
-  .onclick = function() {
+  .onclick = function () {
     MarkAllAsCompleted();
     CheckStuff();
     return;
@@ -21,7 +21,7 @@ document.getElementById('toggle-all')
 
 //calls remove-function when remove-completed button is pressed
 document.getElementById('clear-completed')
-  .onclick = function() {
+  .onclick = function () {
     RemoveCompleted();
     //hides appropriate elements if necessary
     CheckStuff();
@@ -29,19 +29,19 @@ document.getElementById('clear-completed')
   };
 
 document.getElementById('all')
-  .onclick = function() {
+  .onclick = function () {
     FilterAll();
     return;
   };
 
 document.getElementById('active')
-  .onclick = function() {
+  .onclick = function () {
     FilterActive();
     return;
   };
 
-  document.getElementById('completed')
-    .onclick = function() {
+document.getElementById('completed')
+  .onclick = function () {
     FilterCompleted();
     return;
   };
@@ -63,7 +63,7 @@ function AddTodo() {
   checkbox.setAttribute('class', 'toggle-one');
   checkbox.setAttribute('type', 'checkbox');
 
-  checkbox.onclick = function(){
+  checkbox.onclick = function () {
     //hides appropriate elements if necessary
     CheckStuff();
     return;
@@ -122,24 +122,24 @@ function RemoveCompleted() {
   CheckStuff();
 }//method
 
-function CheckStuff(){
+function CheckStuff() {
   CheckItemsLeft();
   ControlBoxHider();
   ClearCompletedHider();
 }
 
-function CheckItemsLeft(){
+function CheckItemsLeft() {
   let node = document.getElementById('todo-list');
 
   let list = node.querySelectorAll('li');
   let listCompleted = node.querySelectorAll('.toggle-one:checked');
   let itemsLeft;
 
-  if(list.length - listCompleted.length === 1){
+  if (list.length - listCompleted.length === 1) {
     itemsLeft = '1 item left';
   }
 
-  else{
+  else {
     itemsLeft = list.length - listCompleted.length + ' items left';
   }
 
@@ -148,80 +148,80 @@ function CheckItemsLeft(){
 }
 
 //if there's items in the list, the control-box is shown, otherwise it's hidden
-function ControlBoxHider(){
+function ControlBoxHider() {
   let list = document.querySelectorAll("#todo-list li");
 
-  if (list.length === 0){
+  if (list.length === 0) {
     document.querySelector('.control-box-container').hidden = true;
   }
 
-  if (list.length > 0){
+  if (list.length > 0) {
     document.querySelector('.control-box-container').hidden = false;
   }
 }
 
 //hides clear-completed button if there are no completed, shows it if there are
-function ClearCompletedHider(){
+function ClearCompletedHider() {
   let node = document.getElementById('todo-list');
 
   let list = node.querySelectorAll('.toggle-one:checked');
 
-  if(list.length > 0){
+  if (list.length > 0) {
     document.getElementById('clear-completed').hidden = false;
   }
 
-  if(list.length === 0){
+  if (list.length === 0) {
     document.getElementById('clear-completed').hidden = true;
   }
 }
 
-function FilterAll(){
+function FilterAll() {
   let node = document.getElementById('todo-list');
 
   let list = document.querySelectorAll('li');
 
-  for(item of list){
+  for (item of list) {
     item.closest('li').hidden = false;
   }
 }
 
-function FilterActive(){
+function FilterActive() {
   FilterAll();
 
   let node = document.getElementById('todo-list');
 
   let list = document.querySelectorAll('.toggle-one:checked');
 
-  for(item of list){
+  for (item of list) {
     item.closest('li').hidden = true;
   }
 }
 
-  function FilterCompleted(){
-    FilterAll();
+function FilterCompleted() {
+  FilterAll();
 
-    let node = document.getElementById('todo-list');
+  let node = document.getElementById('todo-list');
 
-    let list = document.querySelectorAll('.toggle-one:not(:checked)');
+  let list = document.querySelectorAll('.toggle-one:not(:checked)');
 
-    for(item of list){
-      item.closest('li').hidden = true;
+  for (item of list) {
+    item.closest('li').hidden = true;
+  }
+}
+
+function MarkAllAsCompleted() {
+  let toggle = document.getElementById('toggle-all');
+  let list = document.querySelectorAll('#todo-list li');
+
+  if (toggle.checked === true) {
+    for (item of list) {
+      item.querySelector('.toggle-one').checked = true;
     }
   }
 
-  function MarkAllAsCompleted(){
-    let toggle = document.getElementById('toggle-all');
-    let list = document.querySelectorAll('#todo-list li');
-
-    if(toggle.checked === true){
-      for(item of list){
-        item.querySelector('.toggle-one').checked = true;
-      }
+  if (toggle.checked === false) {
+    for (item of list) {
+      item.querySelector('.toggle-one').checked = false;
     }
-
-    if(toggle.checked === false){
-      for(item of list){
-        item.querySelector('.toggle-one').checked = false;
-      }
-    }
-  }//function
+  }
+}//function

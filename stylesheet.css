@@ -3,7 +3,7 @@
 	padding: 0;
 }
 
-html{
+html {
 	background-image: url('background.webp');
 	background-size: 100%;
 	background-attachment: fixed;
@@ -13,7 +13,7 @@ body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
 	font-weight: 300;
-  padding-top: 30px;
+	padding-top: 30px;
 }
 
 h1 {
@@ -31,7 +31,7 @@ main {
 	flex-direction: column;
 	max-width: 550px;
 	box-shadow: 0 2px 4px 0 rgba(77, 75, 75, 0.5),
-	            0 25px 50px 0 rgba(77, 75, 75, 0.6);
+		0 25px 50px 0 rgba(77, 75, 75, 0.6);
 }
 
 /*INPUT BOX*/
@@ -60,13 +60,13 @@ main {
 	display: none;
 }
 
-#toggle-all + label {
+#toggle-all+label {
 	border-radius: 25%;
 	padding: 2px 2px 0px 7px;
 	margin-left: 1px;
 }
 
-#toggle-all:checked + label{
+#toggle-all:checked+label {
 	background: rgb(201, 200, 199, 0.2);
 }
 
@@ -76,7 +76,8 @@ label img {
 
 /*LIST BOX*/
 
-ul { /*affects todo-list and button-list*/
+ul {
+	/*affects todo-list and button-list*/
 	width: 100%;
 	background: white;
 	box-sizing: border-box;
@@ -98,7 +99,7 @@ ul { /*affects todo-list and button-list*/
 	color: #4d4d4d;
 }
 
-#todo-list li .toggle-one:checked + label{
+#todo-list li .toggle-one:checked+label {
 	text-decoration: line-through;
 	color: #d9d9d9;
 }
@@ -115,7 +116,7 @@ ul { /*affects todo-list and button-list*/
 
 /*CONTROL BOX*/
 
-.control-box-container{
+.control-box-container {
 	width: 100%;
 	box-sizing: border-box;
 }
@@ -131,14 +132,14 @@ ul { /*affects todo-list and button-list*/
 	padding: 10px;
 }
 
-@media only screen and (min-width: 450px){
+@media only screen and (min-width: 450px) {
 	.control-box {
 		grid-template-columns: 1fr 2fr 1fr;
 		grid-template-areas:
-		'count filters clear';
+			'count filters clear';
 	}
 
-	#new-todo{
+	#new-todo {
 		font-size: 24px;
 	}
 
@@ -147,16 +148,16 @@ ul { /*affects todo-list and button-list*/
 	}
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 450px) {
 	.control-box {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-template-areas:
-		'filters filters'
-		'count clear';
+			'filters filters'
+			'count clear';
 	}
 
-	#new-todo{
+	#new-todo {
 		font-size: 22px;
 	}
 
@@ -185,16 +186,16 @@ ul { /*affects todo-list and button-list*/
 	display: none;
 }
 
-.filter-checkbox + label {
+.filter-checkbox+label {
 	padding: 3px 4px;
 	cursor: pointer;
 }
 
-.filter-checkbox:checked + label {
+.filter-checkbox:checked+label {
 	border: 1px solid rgba(175, 47, 47, 0.2);
 }
 
-.filter-checkbox:hover + label {
+.filter-checkbox:hover+label {
 	border: 1px solid rgba(175, 47, 47, 0.1);
 }
 
