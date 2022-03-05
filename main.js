@@ -1,3 +1,8 @@
+let todoList = [];
+
+//BUTTONS ETC
+
+//when the user presses enter, the new todo is added
 let input = document.getElementById("new-todo");
 input.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
@@ -6,8 +11,11 @@ input.addEventListener("keyup", function (event) {
   }
 });
 
-let todolist = [];
+//calls remove-function when remove-completed button is pressed
+document.getElementById('clear-completed')
+  .onclick = function() { RemoveCompleted(); };
 
+//FUNCTIONS
 
 function AddTodo() {
   let todo = document.getElementById('new-todo').value;
@@ -17,7 +25,6 @@ function AddTodo() {
 
   let checkbox = document.createElement('input');
   checkbox.setAttribute('class', 'toggle-one');
-  checkbox.setAttribute('id', 'toggle-one');
   checkbox.setAttribute('type', 'checkbox');
 
   li.appendChild(checkbox);
@@ -54,6 +61,11 @@ function AddTodo() {
     console.log(todolist);
   }
 
+  destroyButton.onclick = function(){
+    destroyButton.closest('li').remove()
+    return;
+  };
+
   destroyButton.appendChild(destroyImage);
   li.appendChild(destroyButton);
 
@@ -67,9 +79,20 @@ function AddTodo() {
 
 
 
+  document.querySelector('.control-box').hidden = false;
+
+  //todo-count
 
 }//method
 
+function RemoveCompleted(){
+  let node = document.getElementById('todo-list');
 
 
 
+  let checkedItems = node.querySelectorAll('.toggle-one:checked');
+
+  for(item of checkedItems){
+    item.closest('li').remove();
+  }
+}//method
