@@ -25,16 +25,17 @@
 
     </div>
 
-    <ul id="todo-list">
-    </ul>
+    <ul id="todo-list"></ul>
 
-    <div class="control-box" hidden>
+    <div class="control-box-container" hidden>
+
+      <div class="control-box">
 
       <span class="todo-count"></span>
 
       <ul class="filters">
         <li>
-          <input type="radio" name="filters" id="all" class="filter-checkbox">
+          <input type="radio" name="filters" id="all" class="filter-checkbox" checked>
           <label for="all">All</label>
         </li>
         <li>
@@ -47,7 +48,8 @@
         </li>
       </ul>
 
-      <button type="button" name="clear-completed" id="clear-completed">Clear Completed</button>
+      <button type="button" name="clear-completed" id="clear-completed" hidden>Clear Completed</button>
+    </div>
     </div>
     <span id="counter" /span>
   </main>

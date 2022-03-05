@@ -30,6 +30,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	max-width: 550px;
+	box-shadow: 0 2px 4px 0 rgba(77, 75, 75, 0.5),
+	            0 25px 50px 0 rgba(77, 75, 75, 0.6);
 }
 
 /*INPUT BOX*/
@@ -48,7 +50,6 @@ main {
 	border-radius: none;
 	border: none;
 	padding: 6px;
-	font-size: 24px;
 	width: 100%;
 	box-sizing: border-box;
 	box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%);
@@ -93,12 +94,11 @@ ul { /*affects todo-list and button-list*/
 }
 
 #todo-list li label {
-	font-size: 24px;
 	margin-left: 20px;
-	color: #4d4d4d
+	color: #4d4d4d;
 }
 
-.toggle-one:checked + label{
+#todo-list li .toggle-one:checked + label{
 	text-decoration: line-through;
 	color: #d9d9d9;
 }
@@ -115,12 +115,15 @@ ul { /*affects todo-list and button-list*/
 
 /*CONTROL BOX*/
 
+.control-box-container{
+	width: 100%;
+	box-sizing: border-box;
+}
+
+
 .control-box {
 	display: grid;
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-areas:
-	'count filters clear';
-
+	justify-content: space-between;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: center;
@@ -128,8 +131,45 @@ ul { /*affects todo-list and button-list*/
 	padding: 10px;
 }
 
+@media only screen and (min-width: 450px){
+	.control-box {
+		grid-template-columns: 1fr 2fr 1fr;
+		grid-template-areas:
+		'count filters clear';
+	}
+
+	#new-todo{
+		font-size: 24px;
+	}
+
+	#todo-list li label {
+		font-size: 24px;
+	}
+}
+
+@media only screen and (max-width: 450px){
+	.control-box {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+		'filters filters'
+		'count clear';
+	}
+
+	#new-todo{
+		font-size: 22px;
+	}
+
+	#todo-list li label {
+		font-size: 22px;
+	}
+}
+
+
 .todo-count {
 	grid-area: count;
+	margin-left: -2px;
+	font: inherit;
 }
 
 .filters {
@@ -138,7 +178,7 @@ ul { /*affects todo-list and button-list*/
 
 .filters li {
 	display: inline;
-	padding: 3px 7px;
+	padding: 3px 4px;
 }
 
 .filter-checkbox {
@@ -146,7 +186,7 @@ ul { /*affects todo-list and button-list*/
 }
 
 .filter-checkbox + label {
-	padding: 3px 7px;
+	padding: 3px 4px;
 	cursor: pointer;
 }
 

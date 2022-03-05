@@ -1,12 +1,8 @@
 # TodoMVC-clone
 
 
-- basic css
-- ge funktion till alla knappar
-- sista css grejs
-
-- responsivitet:
-    control-box två rader?
-
-
-T ex med headern så har de gjort det med position istället, top -155px, men vi vill inte göra så. :(
+-gui tester
+  lägg till anteckning och bekräfta att den visas på sidan
+  lägg till en anteckning och bekräfta att sidan visar "1 item left".
+    kryssa sedan i anteckningen och bekräfta att sidan visar "0 items left"
+  lägg till 3 anteckningar, kryssa i en av dem, och bekräfta att sidan visar "2 items left"
