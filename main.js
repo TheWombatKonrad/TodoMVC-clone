@@ -13,6 +13,7 @@ function AddTodo() {
   let todo = document.getElementById('new-todo').value;
 
   let li = document.createElement('li');
+  li.setAttribute('id', todo);
 
   let checkbox = document.createElement('input');
   checkbox.setAttribute('class', 'toggle-one');
@@ -28,29 +29,47 @@ function AddTodo() {
 
   todolist.push(text);
 
-  //document.getElementById('todo-count').textContent = todolist.lenght;
-  document.getElementById('hej').textContent = todolist.length;
-  
-  
+
+  document.getElementById('counter').textContent = todolist.length;
+
+
   let destroyButton = document.createElement('button');
   destroyButton.setAttribute('class', 'destroy');
 
   let destroyImage = document.createElement('img');
   destroyImage.src = 'destroy-image.png'
   destroyImage.alt = 'X';
+  destroyButton.onclick = () => {
+
+    let temp = document.getElementById(todo);
+    console.log(temp)
+    console.log('clicked')
+    console.log(todo);
+    temp.remove();
+    var index = todolist.indexOf(todo);
+    if (index !== -1) {
+      todolist.splice(index, 1);
+      document.getElementById('counter').textContent = todolist.length;
+    }
+    console.log(todolist);
+  }
 
   destroyButton.appendChild(destroyImage);
   li.appendChild(destroyButton);
 
   document.getElementById('todo-list').appendChild(li);
 
-  document.getElementById('new-todo').value='';
+  document.getElementById('new-todo').value = '';
 
   //visa control-box
- // document.querySelector('.control-box').hidden = false;
+  document.querySelector('.control-box').hidden = false;
 
- 
+
+
+
 
 }//method
+
+
 
 
