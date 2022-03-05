@@ -13,7 +13,7 @@ input.addEventListener("keyup", function (event) {
 
 //calls remove-function when remove-completed button is pressed
 document.getElementById('clear-completed')
-  .onclick = function() { RemoveCompleted(); };
+  .onclick = function () { RemoveCompleted(); };
 
 //FUNCTIONS
 
@@ -34,10 +34,10 @@ function AddTodo() {
 
   li.appendChild(text);
 
-  todolist.push(text);
+  todoList.push(text);
 
 
-  document.getElementById('counter').textContent = todolist.length;
+  document.getElementById('counter').textContent = todoList.length;
 
 
   let destroyButton = document.createElement('button');
@@ -53,15 +53,15 @@ function AddTodo() {
     console.log('clicked')
     console.log(todo);
     temp.remove();
-    var index = todolist.indexOf(todo);
+    var index = todoList.indexOf(todo);
     if (index !== -1) {
-      todolist.splice(index, 1);
-      document.getElementById('counter').textContent = todolist.length;
+      todoList.splice(index, 1);
+      document.getElementById('counter').textContent = todoList.length;
     }
-    console.log(todolist);
+    console.log(todoList);
   }
 
-  destroyButton.onclick = function(){
+  destroyButton.onclick = function () {
     destroyButton.closest('li').remove()
     return;
   };
@@ -76,23 +76,16 @@ function AddTodo() {
   //visa control-box
   document.querySelector('.control-box').hidden = false;
 
-
-
-
-  document.querySelector('.control-box').hidden = false;
-
   //todo-count
 
 }//method
 
-function RemoveCompleted(){
+function RemoveCompleted() {
   let node = document.getElementById('todo-list');
-
-
 
   let checkedItems = node.querySelectorAll('.toggle-one:checked');
 
-  for(item of checkedItems){
+  for (item of checkedItems) {
     item.closest('li').remove();
   }
 }//method
