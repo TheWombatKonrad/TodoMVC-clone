@@ -56,7 +56,7 @@ function AddTodo() {
 
   //creates new list element
   let li = document.createElement('li');
-  li.setAttribute('class', todo);
+  li.setAttribute('class', 'todo');
 
   //adds the completed-checkbox to the list element
   let checkbox = document.createElement('input');
