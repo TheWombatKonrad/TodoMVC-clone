@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\womba\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\womba\\.nuget\\packages"
-    ]
-  }
-}

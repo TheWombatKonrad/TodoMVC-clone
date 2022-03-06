@@ -143,7 +143,7 @@ function CheckItemsLeft() {
     itemsLeft = list.length - listCompleted.length + ' items left';
   }
 
-  document.querySelector(".todo-count").innerHTML = itemsLeft;
+  document.querySelector("#todo-count").innerHTML = itemsLeft;
 
 }
 

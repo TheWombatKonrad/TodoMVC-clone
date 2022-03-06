@@ -167,7 +167,7 @@ ul {
 }
 
 
-.todo-count {
+#todo-count {
 	grid-area: count;
 	margin-left: -2px;
 	font: inherit;
